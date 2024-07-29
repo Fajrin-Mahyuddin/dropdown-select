@@ -18,7 +18,7 @@ function App() {
         withSearch={true}
         options={stateOptions}
         className="w-full"
-        isMulti={true}
+        isMulti={false}
         value={value}
         onChange={(e) => setValue(e as [])}
         name="tes"
