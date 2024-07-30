@@ -10,9 +10,9 @@ export type TSelectComponent = {
   options: TTypeOptions[];
   className?: string;
   style?: StylesConfig<TTypeOptions, false>;
-  targetStyle?: StylesConfig<TTypeOptions, false>;
+  targetStyle?: StylesConfig<TTypeOptions>;
   withSearch: boolean;
-  onChange: (e: TTypeOptions[] | TTypeOptions) => void;
+  onChange: <T>(e: T) => void;
   isMulti: boolean;
   value: TTypeOptions[] | TTypeOptions;
 } & (

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import SelectComponent from "./components";
+import SelectDropdown from "./";
 
 const stateOptions = [
-  { value: "tes", label: "tes" },
-  { value: "tos", label: "tos" },
-  { value: "foo", label: "foo" },
-  { value: "bar", label: "bar" },
-  { value: "bar bar lah", label: "bar bar lah" },
+  { value: "Strawberry", label: "Strawberry" },
+  { value: "Strawberry ice", label: "Strawberry ice" },
+  { value: "Orange", label: "Orange" },
+  { value: "Orange strawberry", label: "Orange strawberry" },
+  { value: "Orange strawberry ice", label: "Orange strawberry ice" },
 ];
 
 function App() {
@@ -14,13 +14,16 @@ function App() {
 
   return (
     <div className="max-w-[800px] m-auto mt-[100px]">
-      <SelectComponent
+      <SelectDropdown
         withSearch={true}
         options={stateOptions}
         className="w-full"
-        isMulti={false}
+        isMulti={true}
         value={value}
-        onChange={(e) => setValue(e as [])}
+        onChange={(e) => {
+          setValue(e as typeof value);
+          console.log("value", e);
+        }}
         name="tes"
       />
     </div>
