@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SelectDropdown from "./";
+import SelectDropdown from "./components/organisms/SelectDropdown";
 
 const stateOptions = [
   { value: "Strawberry", label: "Strawberry" },
